@@ -1,0 +1,143 @@
+body, html {
+    background: black;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    flex-direction: row;
+}
+
+.main {
+    margin: 128px 16px 64px;
+    max-width: 640px;
+    color: white;
+    padding: 48px;
+    line-height: 1.5;
+    z-index: 2;
+    background: url(stars.gif);
+    border-style: double;
+    border-color: white;
+    position: relative; 
+}
+
+@media screen and (max-width: 640px) {
+    .main {
+        margin-top: 64px
+    }
+}
+
+ul {
+    padding-left: 16px;
+}
+
+.title {
+    position: relative;
+    margin-top: -7em;
+}
+
+.prizeIntro {
+    text-align: center;
+    margin: 0;
+}
+
+.prize {
+    text-align: center;
+    font-size: 96px;
+    font-weight: bold;
+    text-shadow: 0 7px 0 white;
+    color: green;
+    -webkit-text-stroke: 1px white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.1;
+}
+
+@media screen and (max-width: 640px) {
+    .prize {
+        font-size: 48px;
+        text-shadow: 0 3px 0 white;
+        line-height: 1.3;
+    }
+}
+
+
+.prize img {
+    margin: 0 0.2em;
+}
+
+@media screen and (max-width: 640px) {
+    .prize img {
+        width: 24px;
+    }
+}
+
+
+.prizeConverted {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 2;
+}
+
+.animation {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+    .animation {
+        display: none;
+    }
+}
+
+.x {
+    animation: x 12s linear infinite alternate;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-weight: bold;
+    font-family: Verdana;
+    letter-spacing: -0.2em;
+}
+  
+.y {
+    animation: y 6s linear infinite alternate;
+    font-size: 100px;
+}
+
+.div {
+    animation: color 18s linear infinite;
+    animation-timing-function: steps(1);
+}
+
+@keyframes color {
+    0% {
+        color: red;
+    }
+    33% {
+        color: green;
+    }
+    66% {
+        color: blue;
+    }
+}
+  
+@keyframes x {
+    100% {
+        transform: translateX(calc(100vw - 437px));
+    }
+}
+  
+@keyframes y {
+    100% {
+      transform: translateY(calc(100vh - 123px));
+    }
+}

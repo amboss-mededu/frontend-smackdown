@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AMBOSS Frontend Smackdown 2022</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <div class="animation">
+    <div class="x">
+        <div class="y">
+            <div class="div">&lt;/DIV&gt;</div>
+        </div>
+    </div>
+    </div>
+
+    <div class="main">
+      <svg viewBox="0 0 86 32" class="title">
+        <text x="50%" y="15" text-anchor="middle" fill="yellow" font-family="Impact">FRONTEND</text>
+        <text x="50%" y="30" text-anchor="middle" fill="yellow" font-family="Impact">SMACKDOWN</text>
+      </svg>
+        <h2>The challenge</h2>
+        <p>Your task is to craft a landing page that presents who you are and that showcase your unique skills as a frontend engineer. 
+            Wether you're a master of stylesheets, javascript or plain ol' HTML, this is your chance to show us what you've got!</p>
+
+        <p class="prizeIntro">
+          In addition to eternal fame and glory,
+          <br>the best submission will be awarded with a grand prize of
+        </p>
+        <div class="prize"><img src="src/prize.gif" />0.005 ETH<img src="src/prize.gif" /></div>
+        <div class="prizeConverted">btw that's <span id="eur"></span></div>
+
+        <h2>Submission guidelines</h2>
+        <ul>
+          <li>Commit your project to this repository and place it under a folder with your name in the submissions folder.</li>
+          <li>If you require any build tools, remember to compile the project so that it can be accessed directly from this repository.</li>
+          <li>Submissions must be uploaded before the presentations on [INSERT DATE].</li>
+      </ul>
+    </div>
+
+  <script>
+      fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=EUR')
+        .then(response => response.json())
+        .then(({EUR}) => {
+          const exchange = (0.005 * EUR).toString()
+          document.getElementById('eur').textContent = `${exchange} €`;
+        });
+  </script>
+  </body>
+</html>
