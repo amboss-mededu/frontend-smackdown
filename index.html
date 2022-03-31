@@ -45,7 +45,7 @@
       fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=EUR')
         .then(response => response.json())
         .then(({EUR}) => {
-          const exchange = (0.005 * EUR).toString()
+          const exchange = (0.005 * EUR).toFixed(2).toString()
           document.getElementById('eur').textContent = `${exchange} €`;
         });
   </script>
