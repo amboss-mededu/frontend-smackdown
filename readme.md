@@ -1,4 +1,4 @@
-# Frontend Smackdown
+# Frontend Smackdown Competition
 A high-stakes competition to celebrate our creative abilities as frontend engineers.
 
 GitHub page: https://amboss-mededu.github.io/frontend-smackdown/
