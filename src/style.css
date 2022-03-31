@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Impact-ttf';
+    src: url('impact.ttf') format('ttf'),
+        url('impact.woff2') format('woff2'),
+        url('impact.woff') format('woff'),
+        url('impact.eot') format('eot'),
+        url('impact.svg') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body, html {
     background: black;
     margin: 0;
@@ -25,7 +37,8 @@ body, html {
 
 @media screen and (max-width: 640px) {
     .main {
-        margin-top: 64px
+        margin-top: 64px;
+        padding: 48px 18px;
     }
 }
 
@@ -46,17 +59,16 @@ ul {
 .prize {
     text-align: center;
     font-size: 96px;
-    font-weight: bold;
     text-shadow: 0 7px 0 white;
     color: green;
     -webkit-text-stroke: 1px white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, "Impact-ttf", Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 1.1;
 }
 
 @media screen and (max-width: 640px) {
     .prize {
-        font-size: 48px;
+        font-size: 38px;
         text-shadow: 0 3px 0 white;
         line-height: 1.3;
     }
