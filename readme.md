@@ -1,5 +1,7 @@
 # Frontend Smackdown
-Competition website https://amboss-mededu.github.io/frontend-smackdown/
+A high-stakes competition to celebrate our creative abilities as frontend engineers.
+
+GitHub page: https://amboss-mededu.github.io/frontend-smackdown/
 
 ## The challenge
 Your task is to craft a landing page that presents who you are and that showcase your unique skills as a frontend engineer. Wether you're a master of stylesheets, javascript or plain ol' HTML, this is your chance to show us what you've got!
