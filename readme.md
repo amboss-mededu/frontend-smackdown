@@ -12,4 +12,4 @@ In addition to eternal fame and glory, the best submission will be awarded with 
 ## Submission guidelines
 - Commit your project to this repository and place it under a folder with your name in the submissions folder.
 - If you use any build tools, remember to compile the project so that it can be accessed directly as a github page.
-- Entries must be uploaded before the presentations on the 14th of April.
+- Entries must be uploaded before the presentations on the 21st of April.
