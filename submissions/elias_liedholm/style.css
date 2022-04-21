@@ -35,4 +35,5 @@ body {
     font-weight: bold;
     font-size: 22px;
     text-transform: uppercase;
+    white-space: nowrap;
 }

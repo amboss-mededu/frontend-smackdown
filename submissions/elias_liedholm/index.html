@@ -16,25 +16,25 @@
 
     <a class="start">I Want to Believe</a>
   <script>
-    const requestAccelorameter = () => DeviceOrientationEvent.requestPermission();
+    const requestAccelorameter = () =>
+      DeviceOrientationEvent.requestPermission().then(permissionState => {
+          if (permissionState === 'granted') {
+            window.addEventListener('deviceorientation', function(event) {
+            var alpha = event.alpha;
+            var beta = event.beta;
+            var gamma = event.gamma;
+
+            saucer.style.top = beta;
+            saucer.style.left = gamma;
+          }, false);
+          }
+        })
+        .catch(console.error);;
 
     const saucer = document.querySelector('.saucer');
     const start = document.querySelector('.start');
 
     start.addEventListener('click', requestAccelorameter);
-
-    if(window.DeviceOrientationEvent) {
-      window.addEventListener('deviceorientation', function(event) {
-        var alpha = event.alpha;
-        var beta = event.beta;
-        var gamma = event.gamma;
-
-        saucer.style.top = beta;
-        saucer.style.left = gamma;
-      }, false);
-    }
-    
-
   </script>
   </body>
 </html>
