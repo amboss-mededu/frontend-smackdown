@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>I Want to Believe</title>
+    <meta name="title" content="I Want to Believe">
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="saucer"></div>
+    </div>
+  
+
+    <a class="start">I Want to Believe</a>
+  <script>
+    const requestAccelorameter = () => DeviceOrientationEvent.requestPermission();
+
+    const saucer = document.querySelector('.saucer');
+    const start = document.querySelector('.start');
+
+    start.addEventListener('click', requestAccelorameter);
+
+    if(window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', function(event) {
+        var alpha = event.alpha;
+        var beta = event.beta;
+        var gamma = event.gamma;
+
+        saucer.style.top = beta;
+        saucer.style.left = gamma;
+      }, false);
+    }
+    
+
+  </script>
+  </body>
+</html>
