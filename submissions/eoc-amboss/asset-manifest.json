@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eoc-amboss/static/css/main.c104b157.css",
+    "main.js": "/eoc-amboss/static/js/main.b4769a44.js",
+    "index.html": "/eoc-amboss/index.html",
+    "main.c104b157.css.map": "/eoc-amboss/static/css/main.c104b157.css.map",
+    "main.b4769a44.js.map": "/eoc-amboss/static/js/main.b4769a44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c104b157.css",
+    "static/js/main.b4769a44.js"
+  ]
+}
