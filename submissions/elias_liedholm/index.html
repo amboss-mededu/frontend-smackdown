@@ -14,22 +14,25 @@
     </div>
   
 
-    <a class="start">I Want to Believe</a>
+    <a class="start animate">I Want to<br /> Believe</a>
   <script>
     const requestAccelorameter = () =>
       DeviceOrientationEvent.requestPermission().then(permissionState => {
           if (permissionState === 'granted') {
-            window.addEventListener('deviceorientation', function(event) {
-            var alpha = event.alpha;
-            var beta = event.beta;
-            var gamma = event.gamma;
+          saucer.style.opacity = 1;
+          start.classList.remove('animate')
 
-            saucer.style.top = beta + "px";
-            saucer.style.left = gamma + "px";
+            window.addEventListener('deviceorientation', function(event) {
+              var alpha = event.alpha;
+              var beta = event.beta;
+              var gamma = event.gamma;
+
+              saucer.style.top = beta + "px";
+              saucer.style.left = gamma + "px";
           }, false);
           }
         })
-        .catch(console.error);;
+        .catch(console.error);
 
     const saucer = document.querySelector('.saucer');
     const start = document.querySelector('.start');
