@@ -3,7 +3,7 @@ body {
     width: 100vw;
     margin: 0;
     padding: 0;
-    background: url('./field.jpg') no-repeat center center fixed;
+    background: #b9c0c6 url('./field.jpg') no-repeat center center fixed;
     background-size: auto 100%;
 }
 
